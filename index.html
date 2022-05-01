@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" onclick="jump()">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Jump Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="box">
+      <img
+        src="light.svg"
+        style="
+          position: fixed;
+          margin-top: 50px;
+          margin-left: 150px;
+          height: 70px;
+          width: 70px;
+        "
+      />
+      <div class="container">
+        <audio autoplay loop>
+          <source src="audio/mySound.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+      <div class="game">
+        <div id="character"></div>
+
+        <div id="block"></div>
+      </div>
+    </div>
+
+    <p>Score: <span id="scoreSpan"></span></p>
+  </body>
+  <script src="script.js"></script>
+</html>

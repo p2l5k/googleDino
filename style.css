@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+body {
+  background-image: url("moon.svg");
+
+  background-size: contain;
+  background-color: #2f2e41;
+}
+.box {
+  display: flex;
+  bottom: 0;
+}
+.container {
+  position: fixed;
+  background-image: url("moveRight.svg");
+  height: 500px;
+  width: 500%;
+  background-repeat: repeat-x;
+  bottom: 0;
+  animation: moveRight 9s linear infinite;
+}
+
+.game {
+  margin-left: 500px;
+  margin-top: 500px;
+  width: 500px;
+  height: 300px;
+}
+#character {
+  width: 90px;
+  height: 90px;
+  background-image: url("cat.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  top: 150px;
+}
+.animate {
+  animation: jump 0.3s linear;
+}
+
+@keyframes moveRight {
+  100% {
+    transform: translateX(-3950px);
+  }
+}
+@keyframes jump {
+  0% {
+    top: 150px;
+  }
+  30% {
+    top: 100px;
+  }
+  70% {
+    top: 100px;
+  }
+  100% {
+    top: 150px;
+  }
+}
+
+#block {
+  background-image: url("hurdle.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 130px;
+  left: 500px;
+  animation: block 1s infinite linear;
+}
+@keyframes block {
+  0% {
+    left: 500px;
+  }
+  100% {
+    left: -80px;
+  }
+}
+#cloud {
+  background-image: url("cloud.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  position: relative;
+
+  left: 500px;
+  animation: block 1s infinite linear;
+}
+@keyframes cloud {
+  0% {
+    right: 1500px;
+  }
+  100% {
+    left: -180px;
+  }
+}
+p {
+  text-align: center;
+}
